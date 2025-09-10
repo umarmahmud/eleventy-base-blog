@@ -4,22 +4,75 @@ description: This is a post on My Blog about agile frameworks.
 date: 2018-05-01
 tags: another tag
 ---
-Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
+My first post.
 
-Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.
+Sample C++ code:
 
-## Section Header
+```cpp
+int sysinfo_processes(cJSON** js_result)
+{
+    auto retVal { -1 };
 
-Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.
+    try
+    {
+        if (js_result)
+        {
+            SysInfo info;
+            const auto& processes   {info.processes()};
+            *js_result = cJSON_Parse(processes.dump().c_str());
+            retVal = 0;
+        }
+    }
+    // LCOV_EXCL_START
+    catch (...)
+    {}
 
-```diff-js
- // this is a command
- function myCommand() {
-+  let counter = 0;
--  let counter = 1;
-   counter++;
- }
+    // LCOV_EXCL_STOP
 
- // Test with a line break above this line.
- console.log('Test');
+    return retVal;
+}
+int sysinfo_networks(cJSON** js_result)
+{
+    auto retVal { -1 };
+
+    try
+    {
+        if (js_result)
+        {
+            SysInfo info;
+            const auto& networks    {info.networks()};
+            *js_result = cJSON_Parse(networks.dump().c_str());
+            retVal = 0;
+        }
+    }
+    // LCOV_EXCL_START
+    catch (...)
+    {}
+
+    // LCOV_EXCL_STOP
+
+    return retVal;
+}
+int sysinfo_ports(cJSON** js_result)
+{
+    auto retVal { -1 };
+
+    try
+    {
+        if (js_result)
+        {
+            SysInfo info;
+            const auto& ports       {info.ports()};
+            *js_result = cJSON_Parse(ports.dump().c_str());
+            retVal = 0;
+        }
+    }
+    // LCOV_EXCL_START
+    catch (...)
+    {}
+
+    // LCOV_EXCL_STOP
+
+    return retVal;
+}
 ```
