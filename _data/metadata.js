@@ -1,5 +1,5 @@
 export default {
-	title: "Technical Notes of Umar Mahmud",
+	title: "Noteworthy",
 	url: "https://umarmahmud.com/",
 	language: "en",
 	description: "A tech blog about software development, Python, cybersecurity and AI.",
